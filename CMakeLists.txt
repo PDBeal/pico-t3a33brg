@@ -16,3 +16,9 @@ target_sources(pico-t3a33brg INTERFACE
 )
 
 target_include_directories(pico-t3a33brg INTERFACE ${CMAKE_CURRENT_LIST_DIR})
+
+# Link to pico_stdlib (gpio, time, etc. functions)
+target_link_libraries(${PROJECT_NAME} INTERFACE
+    pico_stdlib
+    hardware_spi
+)
