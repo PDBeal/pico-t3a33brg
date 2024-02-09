@@ -1,5 +1,5 @@
 /*!
- * \file SPI_T3A33BRG.cpp
+ * \file t3a33brg.cpp
  *
  * \mainpage T3A33BRG SPI Library
  *
@@ -13,7 +13,7 @@
  * \section license License
  * MIT license
  */
-#include "SPI_T3A33BRG.h"
+#include "t3a33brg.h"
 
 // Constructor for use with SPI instance:
 SPI_T3A33BRG::SPI_T3A33BRG(uint16_t num, uint8_t mosi_pin, uint8_t sck_pin, spi_inst_t *spi)

@@ -1,6 +1,6 @@
 #pragma once
 /*!
- * \file SPI_T3A33BRG.h
+ * \file t3a33brg.h
  */
 
 #include "hardware/spi.h"
