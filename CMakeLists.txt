@@ -1,9 +1,18 @@
-add_library(pico_t3a33brg
-        t3a33brg.cpp)
 
-target_link_libraries(pico_t3a33brg
-        pico_stdlib
-        hardware_spi
-        )
+cmake_minimum_required(VERSION 3.12)
 
-target_include_directories (pico_t3a33brg PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+
+project(pico-t3a33brg
+    VERSION 1.0.0
+    DESCRIPTION "RP2040 library for controlling strips/pixels using T3A33BRG 5mm LEDs using SPI"
+)
+
+add_library(pico-t3a33brg INTERFACE)
+
+target_sources(pico-t3a33brg INTERFACE
+        ${CMAKE_CURRENT_LIST_DIR}/t3a33brg.cpp
+)
+
+target_include_directories(pico-t3a33brg INTERFACE ${CMAKE_CURRENT_LIST_DIR})
